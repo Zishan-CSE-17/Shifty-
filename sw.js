@@ -1,5 +1,5 @@
 // Shifty service worker: makes the app installable and usable offline.
-const CACHE = 'shifty-v2'
+const CACHE = 'shifty-v3'
 const CORE = ['./', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png']
 
 self.addEventListener('install', e => {

@@ -1,29 +1,41 @@
-# Shifty
+# Shifty: Work Time & Shift Manager
 
-A mobile-friendly shift planner and work-time calculator. This repository is ready to publish with GitHub Pages.
+A free, offline-capable web app (PWA) for tracking work shifts, breaks, overtime, pay periods and estimated earnings. All data stays on your device (browser storage). No account, no server.
 
 ## Features
-- Shift calendar, shift templates, break tracking, reports and settings
-- Installable progressive web app (PWA)
-- Add personal tasks and events from the Calendar page
-- Calendar items saved locally in the current browser/device
-- Quick preset-break dropdown in the shift editor
-- Responsive UI polish for desktop and mobile
 
-## Preview locally
-Because the app registers a service worker, use a local web server instead of opening `index.html` directly.
+- **Dashboard**: live shift timer, weekly / monthly / pay-period totals
+- **Shifts**: templates, one dropdown to pick breaks, copy a shift to other days
+- **Calendar**: monthly view with shifts, **events** and **tasks**; add them from the day panel
+- **Reports**: pay-period summary, CSV export, print
+- **Settings**: targets, companies and wages, backup / restore (shifts, settings, tasks and events)
+
+## Deploy on GitHub Pages
+
+1. Create a repository and upload **all** files in this folder to the repo root.
+2. Go to **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `(root)`**.
+3. Open `https://YOUR-USER.github.io/YOUR-REPO/`.
+4. Check `https://YOUR-USER.github.io/YOUR-REPO/manifest.webmanifest` shows JSON, not a 404.
+
+To install on a phone: open the site, then use **Add to Home Screen** (iOS Safari) or **Install app** (Chrome / Edge).
+
+## Files
+
+| File | Purpose |
+| --- | --- |
+| `index.html` | The whole app (code and styles bundled) |
+| `manifest.webmanifest` | PWA install info |
+| `sw.js` | Service worker for offline use |
+| `icon-*.png`, `apple-touch-icon.png`, `Shifty_Logo.png` | Icons and logo |
+| `.nojekyll` | Tells GitHub Pages to serve files as-is |
+
+## Local preview
 
 ```bash
-python -m http.server 8000
+python3 -m http.server 8000
+# open http://localhost:8000
 ```
 
-Then open http://localhost:8000.
+## Notes
 
-## Publish with GitHub Pages
-1. Create a GitHub repository and upload all files in this folder to its root.
-2. Open **Settings → Pages**.
-3. Under **Build and deployment**, select **Deploy from a branch**.
-4. Choose the `main` branch and `/ (root)`, then save.
-5. Wait for GitHub Pages to publish the site.
-
-The app is static and requires no build step. Tasks and events are stored in browser `localStorage`; they do not sync between devices and are not included in the existing shift backup yet. Download a copy of the repository before replacing a live deployment.
+Earnings are estimates only, not payroll. Back up your data regularly from **Settings → Download backup**.

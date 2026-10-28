@@ -7,6 +7,7 @@ A free, offline-capable web app (PWA) for tracking work shifts, breaks, overtime
 - **Dashboard**: live shift timer, weekly / monthly / pay-period totals
 - **Shifts**: editable shift templates (with default breaks added automatically to new shifts), one dropdown to pick and edit breaks, copy a shift to other days
 - **Calendar**: monthly view with shifts, **events** and **tasks**; add them from the day panel
+- **Reminders**: notification 10 minutes before a shift starts and 2 minutes before a break ends (times adjustable in Settings)
 - **Reports**: pay-period summary, CSV export, print
 - **Settings**: targets, companies and wages, backup / restore (shifts, settings, tasks and events)
 
@@ -37,5 +38,8 @@ python3 -m http.server 8000
 ```
 
 ## Notes
+
+Reminders need the app to be open or running in the background. Browsers cannot deliver alerts to a fully closed web app without a push server. On iPhone, install the app to the Home Screen first (iOS 16.4 or newer) to allow notifications.
+
 
 Earnings are estimates only, not payroll. Back up your data regularly from **Settings → Download backup**.

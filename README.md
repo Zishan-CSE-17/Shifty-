@@ -5,7 +5,7 @@ A free, offline-capable web app (PWA) for tracking work shifts, breaks, overtime
 ## Features
 
 - **Dashboard**: live shift timer, weekly / monthly / pay-period totals
-- **Shifts**: templates, one dropdown to pick breaks, copy a shift to other days
+- **Shifts**: editable shift templates (with default breaks added automatically to new shifts), one dropdown to pick and edit breaks, copy a shift to other days
 - **Calendar**: monthly view with shifts, **events** and **tasks**; add them from the day panel
 - **Reports**: pay-period summary, CSV export, print
 - **Settings**: targets, companies and wages, backup / restore (shifts, settings, tasks and events)

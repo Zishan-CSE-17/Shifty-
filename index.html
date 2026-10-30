@@ -730,7 +730,16 @@ function toolsW(r){P.wireTools(r);var ym=function(){return $(r,'#rp-ym').value};
  r.querySelectorAll('[data-r]').forEach(function(b){b.onclick=function(){P.restore(b.getAttribute('data-r'))}})}
 window.__px={c:{n:'Clock',r:clockR,w:clockW},w:{n:'Week',r:weekR,w:weekW},a:{n:'Plan',r:planR,w:planW},p:{n:'Payday',r:function(){return P.payday()+rulesR()},w:function(r){P.wirePay(r);rulesW(r)}},t:{n:'Tools',r:toolsX,w:toolsW}};
 })();
-</script></head><body><div id="root"></div><script>(function(){
+</script><style id="sp-fix">
+#sp-ov .sp-sheet{max-height:92vh;max-height:92dvh}
+#sp-ov .sp-h,#sp-ov .sp-tabs{flex:0 0 auto}
+#sp-ov .sp-body{flex:1 1 auto;min-height:0;padding:12px 12px calc(16px + env(safe-area-inset-bottom,0px))}
+#sp-ov .sp-h{padding:12px 16px;min-height:60px}
+#sp-ov .sp-x{width:40px;height:40px;display:grid;place-items:center;line-height:1;font-size:22px;padding:0;flex:none}
+#sp-ov .sp-tabs{display:flex;flex-wrap:wrap;gap:6px;overflow:visible;padding:10px 12px}
+#sp-ov .sp-tabs button{flex:1 0 auto;min-height:40px;display:flex;align-items:center;justify-content:center;line-height:1.2;padding:6px 12px!important;font-size:.82rem}
+#sp-fab{display:grid;place-items:center;line-height:1;padding:0;font-size:22px}
+</style></head><body><div id="root"></div><script>(function(){
 var T=`Dashboard|ダッシュボード|ড্যাশবোর্ড
 Shifts|シフト|শিফট
 Calendar|カレンダー|ক্যালেন্ডার

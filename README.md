@@ -1,45 +1,10 @@
+<img src="Shifty_Logo.png" width="520" alt="Shifty"/>
+
 # Shifty: Work Time & Shift Manager
+Ready-to-publish web app (already built). No build step needed. Data is stored in the browser (localStorage).
 
-A free, offline-capable web app (PWA) for tracking work shifts, breaks, overtime, pay periods and estimated earnings. All data stays on your device (browser storage). No account, no server.
+Publish: Settings → Pages → Source: **Deploy from a branch** → Branch **main** / folder **/ (root)** → Save.
 
-## Features
+Install: open the site in Chrome or Brave → Install app (Android: menu ⋮ → Install app; desktop: install icon in the address bar). iPhone: Safari → Share → Add to Home Screen.
 
-- **Dashboard**: live shift timer, weekly / monthly / pay-period totals
-- **Shifts**: editable shift templates (with default breaks added automatically to new shifts), one dropdown to pick and edit breaks, copy a shift to other days
-- **Calendar**: monthly view with shifts, **events** and **tasks**; add them from the day panel
-- **Reminders**: notification 10 minutes before a shift starts and 2 minutes before a break ends (times adjustable in Settings)
-- **Reports**: pay-period summary, CSV export, print
-- **Settings**: targets, companies and wages, backup / restore (shifts, settings, tasks and events)
-
-## Deploy on GitHub Pages
-
-1. Create a repository and upload **all** files in this folder to the repo root.
-2. Go to **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `(root)`**.
-3. Open `https://YOUR-USER.github.io/YOUR-REPO/`.
-4. Check `https://YOUR-USER.github.io/YOUR-REPO/manifest.webmanifest` shows JSON, not a 404.
-
-To install on a phone: open the site, then use **Add to Home Screen** (iOS Safari) or **Install app** (Chrome / Edge).
-
-## Files
-
-| File | Purpose |
-| --- | --- |
-| `index.html` | The whole app (code and styles bundled) |
-| `manifest.webmanifest` | PWA install info |
-| `sw.js` | Service worker for offline use |
-| `icon-*.png`, `apple-touch-icon.png`, `Shifty_Logo.png` | Icons and logo |
-| `.nojekyll` | Tells GitHub Pages to serve files as-is |
-
-## Local preview
-
-```bash
-python3 -m http.server 8000
-# open http://localhost:8000
-```
-
-## Notes
-
-Reminders need the app to be open or running in the background. Browsers cannot deliver alerts to a fully closed web app without a push server. On iPhone, install the app to the Home Screen first (iOS 16.4 or newer) to allow notifications.
-
-
-Earnings are estimates only, not payroll. Back up your data regularly from **Settings → Download backup**.
+Backup: Settings → Download backup (JSON). Records live only in the browser on each device.

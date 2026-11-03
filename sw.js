@@ -1,5 +1,5 @@
 // Shifty service worker: makes the app installable and usable offline.
-const CACHE = 'shifty-v4'
+const CACHE = 'shifty-v7'
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(['./', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png'])))
   self.skipWaiting()
